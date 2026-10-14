@@ -14,7 +14,7 @@ Tailored for emergency response scenarios where pre-fire baseline imagery is una
 
 The framework processes a single post-fire Sentinel-2 image through a six-stage automated pipeline:
 
-![EMBER Framework Workflow](docs/workflow.png)
+![EMBER Framework Workflow](docs/workflow.pdf)
 
 1. **Data Preprocessing & Water Masking**: Ingests 10 Bottom-Of-Atmosphere (BOA) spectral bands resampled to a 10 m grid. Applies a fixed NDWI water mask expanded by a 2-pixel morphological dilation buffer ($20\text{ m}$ safety margin) to eliminate coastal and inland water false alarms.
 2. **Spatial-Spectral Feature Expansion ($10\text{D} \rightarrow 20\text{D}$)**: Concatenates native 10 m surface reflectances with local $3 \times 3$ uniform filter spatial means ($30\text{ m} \times 30\text{ m}$ footprint) to evaluate contextual neighborhoods and suppress speckle noise.
